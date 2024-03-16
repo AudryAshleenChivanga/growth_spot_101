@@ -15,7 +15,6 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#resources">Resources</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -23,44 +22,39 @@
     </header>
     
     <main>
-        <section id="home" class="banner">
-            <div class="container">
-                <h2>Welcome to Growth Spot 101</h2>
-                <p>Your journey to personal growth and effective personal branding starts here.</p>
-            </div>
-        </section>
-        
-        <section id="about" class="info-section">
-            <div class="container">
+            <section id="about" class="container">
                 <h2>About Us</h2>
-                <p>At Growth Spot 101, we believe in empowering individuals through recognition of personal growth milestones, enhancing personal branding, and navigating the complexities of a fast-paced world. Our mission is to illuminate the path for personal development, making every small step a celebrated victory.</p>
+                <p>A brief introduction to our mission and values at Growth Spot 101...</p>
+                <!-- Embed YouTube Video -->
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/Zu5F-_Dlk7Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                </section>  
+            
+
+        <section id="services" class="container">
+            <h2></h2> Services</h2>
+            <div class="service-item">
+                <h3>Personal Growth Coaching</h3>
+                <p>One-on-one coaching sessions to guide you through personal challenges and help you achieve your growth goals.</p>
+            </div>
+            <div class="service-item">
+                <h3>Professional Branding</h3>
+                <p>Expert advice and strategies to enhance your personal brand and professional presence online and offline.</p>
+            </div>
+            <div class="service-item">
+                <h3>Workshops and Webinars</h3>
+                <p>Engaging workshops and webinars covering a variety of topics related to personal and professional development.</p>
             </div>
         </section>
-        
-        <section id="services" class="info-section">
-            <div class="container">
-                <h2>Our Services</h2>
-                <p>We offer a range of services aimed at fostering personal growth and building a strong personal brand. From one-on-one coaching sessions to group workshops and online courses, we're here to support your journey toward self-improvement and professional success.</p>
-            </div>
+
+        <section id="contact" class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions? Want to learn more about our services? Get in touch with us through the form below:</p>
+            <!-- Embedding your specific Google Form -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdwCaG3IGyQ0ILODwLz4JcJTZROKsil6SwQkdkKQjsmrhfNZw/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </section>
         
-        <section id="resources" class="info-section">
-            <div class="container">
-                <h2>Resources</h2>
-                <p>Explore our carefully curated resources designed to aid in your growth journey. From ebooks and articles to podcasts and videos, our resources provide valuable insights and practical tips to help you embrace each step of your personal and professional development.</p>
-            </div>
-        </section>
-        
-        <section id="contact" class="info-section">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <form id="contact-form">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Your Email" required>
-                    <textarea id="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
         </section>
     </main>
     
@@ -70,6 +64,15 @@
         </div>
     </footer>
     
-    <script src="script.js"></script>
-</body>
-</html>
+    <script>
+        document.getElementById('aboutBtn').addEventListener('click', function() {
+            var aboutMore = document.getElementById('aboutMore');
+            if (aboutMore.style.display === 'none') {
+                aboutMore.style.display = 'block';
+                this.textContent = 'Show Less';
+            } else {
+                aboutMore.style.display = 'none';
+                this.textContent = 'Learn More';
+            }
+        });
+
